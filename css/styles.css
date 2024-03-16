@@ -8,6 +8,11 @@
 	box-sizing: border-box;
 }
 
+img {
+	width: 100%;
+	display: block;
+}
+
 :root {
 --color-soft-orange: hsl(35, 77%, 62%);
 --color-soft-red: hsl(5, 85%, 63%);
@@ -20,6 +25,21 @@
 html {
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
+}
+
+nav {
+	display: none;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	container-type: inline-size;
+}
+
+.img-shapes-desktop {
+	display: none;
 }
 
 
