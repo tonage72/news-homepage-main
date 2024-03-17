@@ -59,7 +59,8 @@ main {
 
 	/* We dive... */
 	& > div:nth-child(5) {
-		line-height: 1.5rem;
+		line-height: 7cqi;
+		font-size: 4.5cqi;
 
 		a {
 			text-decoration: none;
@@ -71,7 +72,7 @@ main {
 			border: none;
 			color: white;
 			font-size: 3cqi;
-			padding: 3cqi 4cqi;
+			padding: 4cqi 5cqi;
 			letter-spacing: .8cqi;
 			margin: 5cqi 0 10cqi 0;
 		}
@@ -81,23 +82,70 @@ main {
 	div:nth-child(6) {
 		background-color: var(--color-very-dark-blue);
 		color: white;
-		padding: 5cqi;
+		padding: 6cqi 5cqi;
+		margin-bottom: 8cqi;
 
 		/* title in new div */
-		& > .title-new {
+		.title-new {
+			display: block;
+			margin-bottom: 10cqi;
 			font-size: 10cqi;
 			font-weight: 700;
 			color: var(--color-soft-orange);
 		}
 	}
-}
 
-article {
-	background-color: red;
-}
+	hr {
+		border: 1px solid var(--color-dark-grayish-blue);
+		margin: 10cqi 0 10cqi 0;
+	}
+	
+	.img-shapes-desktop {
+		display: none;
+	}
 
-.img-shapes-desktop {
-	display: none;
+	article {
+
+		line-height: 5cqi;
+	
+		/* number for articles when exists */
+		div {
+			font-size: 8cqi;
+		}
+	
+		/* article heading */
+		h1 {
+			margin-top: 4cqi;
+			font-size: 5.5cqi;
+			font-weight: 800;
+		}
+	
+		/* article summary */
+		p {
+			font-size: 4.5cqi;
+			margin-top: 1rem;
+			color: var(--color-grayish-blue);
+		}
+	}
+
+	.pic-article {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 5cqi;
+
+		div {
+			color: var(--color-grayish-blue);
+		}
+
+		article {
+			margin-top: 8cqi;
+		}
+
+		img {
+			margin: 5cqi 3cqi 5cqi 0;
+			width: 25cqi;
+		}
+	}
 }
 
 .attribution {
@@ -107,4 +155,4 @@ article {
 
 .attribution a {
 	color: hsl(228, 45%, 44%);
-}c
+}
