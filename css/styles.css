@@ -34,14 +34,71 @@ nav {
 main {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: repeat(7, auto);
 	container-type: inline-size;
+	margin: 1rem;
+
+	/* logo, hamburger */
+	div:nth-child(2) {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		margin-bottom: 10cqi;
+
+		img {
+			width: 15cqi;
+		}
+	}
+
+	/* The Bright... */
+	& > div:nth-child(4) {
+		font-size: 12cqi;
+		font-weight: 800;
+		margin: 5cqi 0;
+	}
+
+	/* We dive... */
+	& > div:nth-child(5) {
+		line-height: 1.5rem;
+
+		a {
+			text-decoration: none;
+		}
+
+		button {
+			display: block;
+			background-color: var(--color-soft-red);
+			border: none;
+			color: white;
+			font-size: 3cqi;
+			padding: 3cqi 4cqi;
+			letter-spacing: .8cqi;
+			margin: 5cqi 0 10cqi 0;
+		}
+	}
+
+	/* New stories div */
+	div:nth-child(6) {
+		background-color: var(--color-very-dark-blue);
+		color: white;
+		padding: 5cqi;
+
+		/* title in new div */
+		& > .title-new {
+			font-size: 10cqi;
+			font-weight: 700;
+			color: var(--color-soft-orange);
+		}
+	}
+}
+
+article {
+	background-color: red;
 }
 
 .img-shapes-desktop {
 	display: none;
 }
-
 
 .attribution {
 	font-size: 11px;
@@ -50,4 +107,4 @@ main {
 
 .attribution a {
 	color: hsl(228, 45%, 44%);
-}
+}c
