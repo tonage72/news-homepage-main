@@ -159,20 +159,21 @@ main {
 	
 	body {
 		display: flex;
+		flex-flow: column nowrap;
 		align-items: center;
 		justify-content: center;
 	}
 
 	main {
-		grid-template-columns: repeat(3, auto);
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 		grid-template-rows: repeat(4, auto);
 		grid-template-areas:
 			"header header header"
 			"shapes shapes new"
 			"title about new"
 			"article1 article2 article3";
-		width: 600px;
-		
+		width: 75%;
+		gap: 2rem;
 	
 		.img-shapes-mobile {
 			display: none;
@@ -190,12 +191,18 @@ main {
 		}
 		& > div:nth-child(4) {
 			grid-area: title;
+			font-size: 4.5cqi;
+			margin: 0 6cqi 0 0;
 		}
 		& > div:nth-child(5) {
 			grid-area: about;
+			margin: 0;
+			font-size: 1.4cqi;
+			line-height: 2cqi;
 		}
 		div:nth-child(6) {
 			grid-area: new;
+			
 		}
 		.pic-article:nth-child(7) {
 			grid-area: article1;
