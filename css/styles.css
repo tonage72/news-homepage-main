@@ -66,6 +66,7 @@ main {
 			text-decoration: none;
 		}
 
+		/* READ MORE button */
 		button {
 			display: block;
 			background-color: var(--color-soft-red);
@@ -158,10 +159,8 @@ main {
 @media (width > 1000px) {
 	
 	body {
-		display: flex;
-		flex-flow: column nowrap;
-		align-items: center;
-		justify-content: center;
+		height: 100vh;
+		display: grid;
 	}
 
 	main {
@@ -172,8 +171,12 @@ main {
 			"shapes shapes new"
 			"title about new"
 			"article1 article2 article3";
-		width: 75%;
+		width: clamp(100px, 80%, 1200px);
+		/* max-width: 2200px; */
 		gap: 2rem;
+		margin: auto;
+		padding: 1cqi 0 0 0;
+
 	
 		.img-shapes-mobile {
 			display: none;
@@ -185,33 +188,89 @@ main {
 
 		div:nth-child(2) {
 			grid-area: header;
+			container-type: inline-size;
+			margin-bottom: 2cqi;
+
+			img {
+				width: 5cqi;
+			}
 		}
 		figure:nth-child(3) {
 			grid-area: shapes;
 		}
-		& > div:nth-child(4) {
+		div:nth-child(4) {
 			grid-area: title;
-			font-size: 4.5cqi;
-			margin: 0 6cqi 0 0;
-		}
-		& > div:nth-child(5) {
-			grid-area: about;
+			container-type: inline-size;
 			margin: 0;
-			font-size: 1.4cqi;
-			line-height: 2cqi;
+		
+			p {
+				font-size: 15cqi;
+				line-height: 15cqi;
+			}
 		}
+		div:nth-child(5) {
+			grid-area: about;
+			container-type: inline-size;
+			
+			p {
+				font-size: 4.3cqi;
+				line-height: 7cqi;
+			}
+
+			button {
+				margin: 0;
+				font-size: 5cqi;
+				letter-spacing: .3cqi;
+				line-height: normal;
+				padding: 3cqi 10cqi;
+				margin-top: 10cqi;
+			}
+		}
+
+		.pic-article {
+			container-type: inline-size;
+			gap: 2cqi;
+			margin: 4cqi 0;
+		}
+
 		div:nth-child(6) {
 			grid-area: new;
-			
+			container-type: inline-size;
+			padding: 2cqi;
+			margin: 0;
+
+			.title-new {
+				margin: 0;
+			}
+
+			h1 {
+				font-size: 7cqi;
+				margin: 0;
+				line-height: normal;
+				padding: 10cqi 0 5cqi 0;
+			}
+
+			p {
+				font-size: 5cqi;
+				line-height: 8cqi;
+				margin: 0;
+			}
+
+			hr {
+				margin: 10cqi 0 0 0;
+			}
 		}
 		.pic-article:nth-child(7) {
 			grid-area: article1;
+			container-type: inline-size;
 		}
 		.pic-article:nth-child(8) {
 			grid-area: article2;
+			container-type: inline-size;
 		}
 		.pic-article:nth-child(9) {
 			grid-area: article3;
+			container-type: inline-size;
 		}
 
 	}
