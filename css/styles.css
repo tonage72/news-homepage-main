@@ -39,26 +39,35 @@ main {
 	margin: 1rem;
 
 	/* logo, hamburger */
-	div:nth-child(2) {
+	header {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: space-between;
 		margin-bottom: 10cqi;
 
+		ul {
+			list-style-type: none;
+			display: flex;
+			flex-flow: row nowrap;
+			gap: 50px;
+			font-size: 1.3cqi;
+		}
+
 		img {
 			width: 15cqi;
 		}
+
 	}
 
 	/* The Bright... */
-	& > div:nth-child(4) {
+	& > div:nth-child(3) {
 		font-size: 12cqi;
 		font-weight: 800;
 		margin: 5cqi 0;
 	}
 
 	/* We dive... */
-	& > div:nth-child(5) {
+	& > div:nth-child(4) {
 		line-height: 7cqi;
 		font-size: 4.5cqi;
 
@@ -80,7 +89,7 @@ main {
 	}
 
 	/* New stories div */
-	div:nth-child(6) {
+	div:nth-child(5) {
 		background-color: var(--color-very-dark-blue);
 		color: white;
 		padding: 6cqi 5cqi;
@@ -172,12 +181,14 @@ main {
 			"title about new"
 			"article1 article2 article3";
 		width: clamp(100px, 80%, 1200px);
-		/* max-width: 2200px; */
 		gap: 2rem;
 		margin: auto;
 		padding: 1cqi 0 0 0;
 
-	
+		nav {
+			display: block;
+		}
+
 		.img-shapes-mobile {
 			display: none;
 		}
@@ -186,7 +197,7 @@ main {
 			display: block;
 		}
 
-		div:nth-child(2) {
+		header {
 			grid-area: header;
 			container-type: inline-size;
 			margin-bottom: 2cqi;
@@ -194,11 +205,29 @@ main {
 			img {
 				width: 5cqi;
 			}
+
+			img:nth-child(2) {
+				display: none;
+			}
+
+			nav {
+				display: flex;
+				align-items: center;
+
+				a {
+					text-decoration: none;
+					color: black;
+				}
+
+			}
+
+			
+
 		}
-		figure:nth-child(3) {
+		figure:nth-child(2) {
 			grid-area: shapes;
 		}
-		div:nth-child(4) {
+		div:nth-child(3) {
 			grid-area: title;
 			container-type: inline-size;
 			margin: 0;
@@ -208,7 +237,7 @@ main {
 				line-height: 15cqi;
 			}
 		}
-		div:nth-child(5) {
+		div:nth-child(4) {
 			grid-area: about;
 			container-type: inline-size;
 			
@@ -233,7 +262,7 @@ main {
 			margin: 4cqi 0;
 		}
 
-		div:nth-child(6) {
+		div:nth-child(5) {
 			grid-area: new;
 			container-type: inline-size;
 			padding: 2cqi;
@@ -260,15 +289,15 @@ main {
 				margin: 10cqi 0 0 0;
 			}
 		}
-		.pic-article:nth-child(7) {
+		.pic-article:nth-child(6) {
 			grid-area: article1;
 			container-type: inline-size;
 		}
-		.pic-article:nth-child(8) {
+		.pic-article:nth-child(7) {
 			grid-area: article2;
 			container-type: inline-size;
 		}
-		.pic-article:nth-child(9) {
+		.pic-article:nth-child(8) {
 			grid-area: article3;
 			container-type: inline-size;
 		}
