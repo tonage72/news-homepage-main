@@ -32,6 +32,7 @@ nav {
 }
 
 main {
+	position: relative;;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(7, auto);
@@ -45,18 +46,38 @@ main {
 		justify-content: space-between;
 		margin-bottom: 10cqi;
 
-		ul {
-			list-style-type: none;
-			display: flex;
-			flex-flow: row nowrap;
-			gap: 50px;
-			font-size: 1.3cqi;
-		}
+		
 
 		img {
 			width: 15cqi;
 		}
+		
+		nav {
+			position: absolute;
+			left: 30cqi;
+			top: -1rem;
+			width: 100%;
+			height: 100vh;
+			background-color: orange;
 
+			a {
+				text-decoration: none;
+				color: black;
+			}
+		}
+
+		ul {
+			list-style-type: none;
+			display: flex;
+			flex-flow: column nowrap;
+			gap: 7cqi;
+			padding: 35cqi 0 100cqh 5cqi;
+
+			li {
+				font-size: 6cqi;
+				font-weight: 700;
+			}
+		}
 	}
 
 	/* The Bright... */
@@ -165,11 +186,11 @@ main {
 	}
 }
 
-@media (width > 1000px) {
+@media (width >= 1000px) {
 	
 	body {
 		height: 100vh;
-		display: grid;
+		/* display: grid; */
 	}
 
 	main {
@@ -184,10 +205,6 @@ main {
 		gap: 2rem;
 		margin: auto;
 		padding: 1cqi 0 0 0;
-
-		nav {
-			display: block;
-		}
 
 		.img-shapes-mobile {
 			display: none;
@@ -211,17 +228,22 @@ main {
 			}
 
 			nav {
-				display: flex;
 				align-items: center;
+				position: relative;
+				width: fit-content;
+				height: auto;
+				left: 0;
+				top: 0;
 
-				a {
-					text-decoration: none;
-					color: black;
+				ul {
+					flex-flow: row nowrap;
+					padding: 0;
+
+					li {
+						font-size: 1cqi;
+					}
 				}
-
-			}
-
-			
+			}			
 
 		}
 		figure:nth-child(2) {
@@ -301,15 +323,5 @@ main {
 			grid-area: article3;
 			container-type: inline-size;
 		}
-
 	}
-}
-
-.attribution {
-	font-size: 11px;
-	text-align: center;
-}
-
-.attribution a {
-	color: hsl(228, 45%, 44%);
 }
