@@ -27,8 +27,16 @@ html {
 	font-size: 15px;
 }
 
-nav {
+.overlay {
+	position: fixed;
 	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
 }
 
 main {
@@ -46,8 +54,6 @@ main {
 		justify-content: space-between;
 		margin-bottom: 10cqi;
 
-		
-
 		img {
 			width: 15cqi;
 		}
@@ -58,11 +64,20 @@ main {
 			top: -1rem;
 			width: 100%;
 			height: 100vh;
-			background-color: orange;
+			background-color: white;
+			display: none;
 
 			a {
 				text-decoration: none;
 				color: black;
+			}
+
+			.hamburger-close {
+				width: 10cqi;
+				position: relative;
+				margin: 0 0 0 auto;
+				right: 32cqi;
+				top: 7cqi;
 			}
 		}
 
@@ -190,7 +205,6 @@ main {
 	
 	body {
 		height: 100vh;
-		/* display: grid; */
 	}
 
 	main {
